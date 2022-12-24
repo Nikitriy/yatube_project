@@ -1,0 +1,20 @@
+<!DOCTYPE html> <!-- Используется html 5 версии -->
+<html lang="ru"> <!-- Язык сайта - русский -->
+  <head>    
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      {% include 'includes/header.html' %}
+    </header>
+    <main>
+      {% block contant %}
+        Произошли непредвиденные неполадки
+      {% endblock %}
+    </main>       
+    <footer>
+      {% include 'includes/footer.html' %}
+    </footer>
+  </body>
+</html>
