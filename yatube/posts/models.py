@@ -19,4 +19,4 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name='posts'
     )
-    group = models.ForeignKey(Group, blank=True, null=True, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, blank=True, null=True, on_delete=models.CASCADE, related_name = 'group')

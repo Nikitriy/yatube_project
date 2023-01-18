@@ -15,20 +15,17 @@
   <title>{{ title }}</title>
 {% endblock %}
 {% block contant %}
-{% for group in group %}
 {% for post in posts %}
-<p>Группа: {{ group.title }}</p>
-<ul>
-  <li>
-    Автор: {{ post.author.get_full_name }}
-  </li>
-  <li>
-    Дата публикации: {{ post.pub_date }}
-  </li>
-</ul>
-<p>{{ post.text }}</p>
-<a href="posts/index">вернуться на главную</a>
-{% if not forloop.last %}<hr>{% endif %}
-{% endfor %}
+  <ul>
+    <li>
+      Название группа: {{ group.title }}
+    </li>
+    <li>
+      Описание группы: {{ group.description }}
+    </li>
+  </ul>
+  <p>{{ post.text }}</p>
+  <a href="posts.index">вернуться на главную</a>
+  {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %}
