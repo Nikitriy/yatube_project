@@ -15,17 +15,17 @@
   <title>{{ title }}</title>
 {% endblock %}
 {% block contant %}
-{% for post in posts %}
-  <ul>
-    <li>
-      Название группа: {{ group.title }}
-    </li>
-    <li>
-      Описание группы: {{ group.description }}
-    </li>
-  </ul>
-  <p>{{ post.text }}</p>
-  <a href="posts.index">вернуться на главную</a>
-  {% if not forloop.last %}<hr>{% endif %}
-{% endfor %}
+  {% for post in posts %}
+    <ul>
+      <li>
+        Название группа: {{ group.title }}
+      </li>
+      <li>
+        Описание группы: {{ group.description }}
+      </li>
+    </ul>
+    <p>{{ post.text }}</p>
+    <a href="posts.index">вернуться на главную</a>
+    {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %}
 {% endblock %}
